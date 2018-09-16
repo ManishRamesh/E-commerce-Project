@@ -18,6 +18,7 @@
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
 			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
 		</ol>
 
 
@@ -27,44 +28,46 @@
 
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-				<img src="resources/images/iphone.jpg" alt="Apple iPhone X"
-					height="50px" width="100%">
+				<img src="resources/images/Home.png" alt="Home and Furnishing"
+					height="300px" width="100%">
 				<div class="carousel-caption">
-					<h1>Apple iPhone X</h1>
-					<h5>The fastest Phone ever made.</h5>
 				</div>
 			</div>
 
 			<!--1-->
 
 			<div class="item">
-				<img src="resources/images/Note9.jpg" alt="Photo" height="50px"
+				<img src="resources/images/iphoneXs.jpg" alt="Xs" height="300px"
 					width="100%">
 				<div class="carousel-caption">
-					<h1>Samsung Galaxy Note 9</h1>
-					<p>The fastest Note ever made.</p>
 				</div>
 			</div>
 
 			<!--2-->
 
 			<div class="item">
-				<img src="resources/images/pixel.jpg" alt="pic" height="50px"
+				<img src="resources/images/note.jpg" alt="Note 9" height="300px"
 					width="100%">
 				<div class="carousel-caption">
-					<h1>Google Pixel 2 XL</h1>
-					<p>Best Camera Phone ever made.</p>
 				</div>
 			</div>
 
 			<!--3-->
 
 			<div class="item">
-				<img src="resources/images/LG.jpg" alt="pica" height="50px"
+				<img src="resources/images/TV.png" alt="TV" height="300px"
 					width="100%">
 				<div class="carousel-caption">
-					<h1>LG G7</h1>
-					<h5>Best Video camera Phone ever made.</h5>
+				</div>
+			</div>
+		
+		
+		<!-- 4 -->
+		
+		<div class="item">
+				<img src="resources/images/hk.jpg" alt="Appliances" height="300px"
+					width="100%">
+				<div class="carousel-caption">
 				</div>
 			</div>
 		</div>
@@ -85,19 +88,20 @@
 	<br>
 
 	<div class="container">
+	<h3>Today's Hot Deals <span style="color: red"><span class="glyphicon glyphicon-fire"></span></span></h3><br><br>
 		<div class="row">
 			<c:forEach items="${productsList}" var="p">
 				<div class="col-lg-3">
 					<center>
 						<img src="<c:url value='/resources/images/${p.id}.png'></c:url>"
-							height="190px" width="220px"><br> <b>${p.productName}<br>
+							height="200px" width="250px"><br> <b>${p.productName}<br>
 							<span style="color: red">${p.price}</span></b><br>
 						<security:authorize access="hasRole('ROLE_USER')">
 							<a href="<c:url value='/all/getproduct/${p.id }'></c:url>"><span
 								class="glyphicon glyphicon-shopping-cart"></span>ADD</a>
 						</security:authorize>
 					</center>
-					<br> <br>
+					<br> <br><br>
 				</div>
 			</c:forEach>
 		</div>

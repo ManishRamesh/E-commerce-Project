@@ -40,7 +40,7 @@
 					<tr>
 						<td><a
 							href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.id }</a></td>
-						<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.image}<img src="<c:url value='/resources/images/${p.id }.png'></c:url>" height="90px" width="100px"></a></td>
+						<td><a href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.image}<img src="<c:url value='/resources/images/${p.id }.png'></c:url>" height="130px" width="180px"></a></td>
 						<td><a href="<c:url value='/all/getproduct/${p.id}'></c:url>">${p.productName}</a></td>
 						<td>${p.price}</td>
 
